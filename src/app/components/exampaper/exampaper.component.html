@@ -13,11 +13,11 @@
                 <nav class="nav navtab-links">
                   <ul>
                     <li class="active" (click)="getOfflineBatches()" style="cursor:pointer">
-                      <a data-toggle="tab" href="#app">Apptitude</a>
+                      <a data-toggle="tab" routerLink="exampaper/aptitude">Aptitude</a>
                     </li>
-                    <li>
-                      <a  data-toggle="tab" href="#tech" (click)="getOnlineBatches()">Technical</a>
-                    </li>
+                    <!-- <li>
+                      <a  data-toggle="tab">Technical</a>
+                    </li> -->
                   </ul>
                 </nav>
               </div>
@@ -25,7 +25,7 @@
             <div class="row">
               <div class="col-md-12 text-padding">
                 <div class="row">
-                  <div class="col-md-12" style="overflow-x:hidden;">
+                  <div class="col-md-9" style="overflow-x:hidden;">
                     <div class="tab-content">
                       <div class="row tab-pane fade in active" id="app">
                         <form #f="ngForm" (ngSubmit)="submit(f.value)">
@@ -49,7 +49,9 @@
                           </div>
                     </div>
                   </div>
-                
+                <div class="col-md-3" *ngIf="count>0">
+                    Your Score in Aptitude:{{count}}
+                </div>
                 </div>
               </div>
             </div>

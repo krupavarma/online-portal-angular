@@ -1,0 +1,62 @@
+<section class="section-padding">
+    <div class="container block">
+        <div class="row text-center padding15">
+            <div class="col-md-12">
+                <h1>Question Paper</h1>
+    
+            </div>
+    
+        </div>
+        <div class="container">
+                <div class="row">
+                  <div class="col-md-12 text-center">
+                    <nav class="nav navtab-links">
+                      <ul>
+                        <li class="active" (click)="getOfflineBatches()" style="cursor:pointer">
+                          <a data-toggle="tab" routerLink="exampaper/aptitude">Technical</a>
+                        </li>
+                        <!-- <li>
+                          <a  data-toggle="tab">Technical</a>
+                        </li> -->
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 text-padding">
+                    <div class="row">
+                      <div class="col-md-9" style="overflow-x:hidden;">
+                        <div class="tab-content">
+                          <div class="row tab-pane fade in active" id="app">
+                            <form #f="ngForm" (ngSubmit)="submit(f.value)">
+                            <div class="row batches-list" *ngFor="let item of apptitute">
+                            <h5>{{item.id}} {{item.question}}</h5>
+                            <div class="radio" *ngFor="let opt of item.options;let i = index">
+                                    <label><input type="radio" name="{{item.id}}" [value]="opt.id" ngModel>{{opt.value}}</label>
+                                  </div>
+                                  <div>
+                                 
+                                  </div>
+                                  
+                            </div>
+                            <button type="submit" class="btn btn-primary">submit</button>
+                          </form>
+                          </div>
+                          <div class="row tab-pane fade in" id="tech">
+                                <div class="row batches-list">
+                                 <h1>Tech</h1>
+                                </div>
+                              </div>
+                        </div>
+                      </div>
+                    <div class="col-md-3" *ngIf="count>0">
+                        Your Total Score:{{ total}}
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+    
+    </div>
+    </section>

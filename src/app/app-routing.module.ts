@@ -8,11 +8,15 @@ import {SitemapComponent} from './components/footer/sitemap/sitemap.component';
 import {AdminloginComponent} from './components/adminlogin/adminlogin.component';
 import {RegistrationComponent} from './components/registration/registration.component';
 import {ExampaperComponent} from './components/exampaper/exampaper.component';
-
+import {AptitudeComponent} from './components/exampaper/aptitude/aptitude.component';
+import {TechnicalComponent} from './components/exampaper/technical/technical.component';
 export const routes: Routes = [
   { path: '', component: LandingComponent },
   {path:"login",component:AdminloginComponent},
   {path:'exampaper',component:ExampaperComponent},
+  {path:'exampaper/technical',component:TechnicalComponent},
+  {path:'exampaper/aptitude',component:AptitudeComponent},
+
   {path:'registration',component:RegistrationComponent},
   {path:'privacypolicy',component:PrivacypolicyComponent},
   {path:'sitemap',component:SitemapComponent},

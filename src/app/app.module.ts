@@ -31,6 +31,8 @@ import {RegistrationComponent} from './components/registration/registration.comp
 import {RegisterService} from './components/registration/register.service';
 import {LoginService} from './components/adminlogin/login.service';
 import {ExampaperComponent} from './components/exampaper/exampaper.component';
+import {AptitudeComponent} from './components/exampaper/aptitude/aptitude.component';
+import {TechnicalComponent} from './components/exampaper/technical/technical.component';
 @NgModule({
   imports: [
     BrowserModule.withServerTransition({ appId: 'Digitallync-Online Exam portal' }),
@@ -42,7 +44,7 @@ import {ExampaperComponent} from './components/exampaper/exampaper.component';
   ],
   declarations: [
     AppComponent,AdminloginComponent,RegistrationComponent,
-    HeaderComponent,
+    HeaderComponent,AptitudeComponent,TechnicalComponent,
     FooterComponent,
     LandingComponent,
     BgvideoComponent,
